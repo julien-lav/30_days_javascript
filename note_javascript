@@ -1,0 +1,9 @@
+alt+7 => ` ` to use ${}
+
+const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+
+to stop in a function 
+if(!element) return;
+
+
+
