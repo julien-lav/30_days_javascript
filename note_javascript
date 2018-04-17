@@ -1,9 +1,16 @@
-alt+7 => ` ` to use ${}
+alt+7 => ` ` to use ${} 
 
 const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
 
-to stop in a function 
+// To stop in a function 
 if(!element) return;
+
+------
+function handleValue(){...}
+var inputs = document.querySelectorAll('.titles');
+inputs.forEach(input => input.addEvenListener('change', handleValue));
+
+
 
 
 
