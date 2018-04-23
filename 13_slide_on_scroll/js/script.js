@@ -22,8 +22,15 @@ function checkSlide(e){
     const slideInAt = (window.scrollY +  window.innerHeight) - slideImage.height / 2;
     const imageBottom = slideImage.offsetTop + slideImage.height;
     const isHalfShown = slideInAt > slideImage.offsetTop;
-
+    const isNotScrolledPast = window.scrollY < imageBottom;
+    if(isHalfShown && isNotScrolledPast){
+      slideImage.classList.add('active')
+    } 
+    //else {
+    // Not a huge fan of this on
+    // slideImage.classList.remove('active')
+    //}
   });
 }
 
-window.addEventListener('scroll', debounce(checkSlide));
+window.addEventListener('scroll', debounce(checkSlide, 10)); // donc =>  wait = 10
